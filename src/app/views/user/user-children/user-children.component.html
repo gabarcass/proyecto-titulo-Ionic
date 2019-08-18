@@ -1,0 +1,57 @@
+<ion-grid>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [src]="this.seleccionado?.fotografia" />
+      </ion-avatar>
+      <ion-label>{{ this.seleccionado.nombre | uppercase }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col class="divider">
+      <ion-item-divider color="secondary">
+        <ion-label>
+          Seleccione la acción a realizar
+        </ion-label>
+      </ion-item-divider>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-card [routerLink]="['/user/children/', this.seleccionado.id, 'tutor']">
+        <ion-card-content class="ion-text-center">
+          <ion-icon name="people" style="zoom:4.0;"></ion-icon>
+          <h4>Administrar tutores</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card [routerLink]="['/user/children/', this.seleccionado.id, 'medicine']">
+        <ion-card-content class="ion-text-center">
+          <ion-icon name="medkit" style="zoom:4.0;"></ion-icon>
+          <h4>Medicamentos</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-card [routerLink]="['/user/children/', this.seleccionado.id, 'control']">
+        <ion-card-content class="ion-text-center">
+          <ion-icon name="repeat" style="zoom:4.0;"></ion-icon>
+          <h4>Ingreso / Retiro</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card [routerLink]="['/user/children/', this.seleccionado.id, 'conduct']">
+        <ion-card-content class="ion-text-center">
+          <ion-icon name="happy" style="zoom:4.0;"></ion-icon>
+          <h4>Comportamiento</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

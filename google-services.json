@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "356087445599",
+    "firebase_url": "https://proyecto-titulo-ffc1f.firebaseio.com",
+    "project_id": "proyecto-titulo-ffc1f",
+    "storage_bucket": "proyecto-titulo-ffc1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356087445599:android:3e18c673a90cb577",
+        "android_client_info": {
+          "package_name": "com.gabarca.babycontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356087445599-adne5tqjd8d57hr1i4biugppnimbuua9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfNNhUWHjwba4DO73YwsXmxldPBvEPAbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356087445599-adne5tqjd8d57hr1i4biugppnimbuua9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

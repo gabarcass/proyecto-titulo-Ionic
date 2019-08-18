@@ -1,0 +1,8 @@
+<ion-app>
+  <ion-header>
+    <app-top-bar *ngIf="authSrv.getSession()"></app-top-bar>
+  </ion-header>
+  <ion-content>
+    <router-outlet></router-outlet>
+  </ion-content>
+</ion-app>

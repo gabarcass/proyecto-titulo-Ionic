@@ -1,0 +1,9 @@
+<ion-content>
+  <ion-item *ngFor="let children of lista" [routerLink]="['/user/children', children.id]">
+    <ion-avatar slot="start">
+      <img [src]="children.fotografia" />
+    </ion-avatar>
+    <ion-label>{{ children.nombre }}</ion-label>
+  </ion-item>
+  <ion-button [routerLink]="['/user/institucion']">Institucion</ion-button>
+</ion-content>

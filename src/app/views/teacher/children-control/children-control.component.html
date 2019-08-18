@@ -1,0 +1,26 @@
+<!-- <ion-text><h3>Apoderados</h3></ion-text> -->
+<ion-content>
+  <h3 class="ion-text-center">INGRESO / RETIRO</h3>
+  <ion-item *ngIf="this.registroAsistencia.length==' 1'">
+    <ion-label>Actualmente el niño se encuentra <br>en la sala cuna</ion-label>
+  </ion-item>
+  <ion-item *ngIf='this.registroAsistencia.length=="0" || this.registroAsistencia.length=="2"'>
+    <ion-label>Actualmente no se encuentra el niño <br> en la sala cuna</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let authorized of lista" (click)="presentModal(authorized)">
+    <ion-avatar slot="start" *ngIf="authorized.role === 'parents'">
+      <img [src]="authorized.fotografia" />
+    </ion-avatar>
+    <ion-label>{{ authorized.nombre }}</ion-label>
+    <ion-label>{{ authorized.parentesco }}</ion-label>
+  </ion-item>
+
+  <!-- <ion-text><h3>Tutores</h3></ion-text>
+  <ion-item *ngFor="let dato of listaTutores" (click)="presentModal(dato)">
+    <ion-avatar slot="start">
+      <img src="{{ dato.fotografia }}" />
+    </ion-avatar>
+    <ion-label>{{ dato.nombre }}</ion-label>
+    <ion-label>{{ dato.parentesco }}</ion-label>
+  </ion-item> -->
+</ion-content>

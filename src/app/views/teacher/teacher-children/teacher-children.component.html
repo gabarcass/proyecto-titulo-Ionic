@@ -1,0 +1,107 @@
+<ion-grid>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [src]="this.seleccionado.fotografia" />
+      </ion-avatar>
+      <ion-label>{{ this.seleccionado.nombre | uppercase }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col class="divider">
+      <ion-item-divider color="secondary">
+        <ion-label>
+          Seleccione la acción a realizar
+        </ion-label>
+      </ion-item-divider>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-card
+        [routerLink]="['/teacher/children/', this.seleccionado.id, 'contact']"
+      >
+        <ion-card-content class="ion-text-center"
+          ><ion-icon name="call" style="zoom:4.0;"></ion-icon>
+          <h4>Contactar Padres</h4></ion-card-content
+        >
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card
+        [routerLink]="['/teacher/children/', this.seleccionado.id, 'medicine']"
+      >
+        <ion-card-content class="ion-text-center"
+          ><ion-icon name="medkit" style="zoom:4.0;"></ion-icon>
+          <h4>Medicamentos</h4></ion-card-content
+        >
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-card
+        [routerLink]="['/teacher/children/', this.seleccionado.id, 'control']"
+      >
+        <ion-card-content class="ion-text-center"
+          ><ion-icon name="repeat" style="zoom:4.0;"></ion-icon>
+          <h4>Ingreso / Retiro</h4></ion-card-content
+        >
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card
+        [routerLink]="['/teacher/children/', this.seleccionado.id, 'conduct']"
+      >
+        <ion-card-content class="ion-text-center"
+          ><ion-icon name="happy" style="zoom:4.0;"></ion-icon>
+          <h4>Comportamiento</h4></ion-card-content
+        >
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- <ion-card> -->
+<!-- <ion-card-header>
+    <ion-card-title>{{ this.seleccionado.nombre }}</ion-card-title>
+    <img id="foto" src="{{ this.seleccionado.fotografia }}" />
+    <ion-card-content>
+      Carlitos es un niño muy alegre le gusta divertirse bla bla bla Dirección:
+      {{ this.seleccionado.direccion }}
+    </ion-card-content>
+  </ion-card-header>
+ -->
+<!-- <ion-list>
+    <ion-item
+      [routerLink]="['/teacher/children/', this.seleccionado.id, 'contact']"
+    >
+      <ion-icon name="call"></ion-icon>
+      <ion-label>Contactar Padres</ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/teacher/children/', this.seleccionado.id, 'medicine']"
+    >
+      <ion-icon name="medkit"></ion-icon>
+      <ion-label>Medicamentos</ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/teacher/children/', this.seleccionado.id, 'control']"
+    >
+      <ion-icon name="return-right"></ion-icon>
+      <ion-label>Ingreso / Retiro</ion-label>
+    </ion-item>
+    <ion-item (click)="this.router.navigate([this.router.url + '/retiro'])">
+      <ion-icon name="return-left"></ion-icon>
+      <ion-label>Retiro</ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/teacher/children/', this.seleccionado.id, 'conduct']"
+    >
+      <ion-icon name="happy"></ion-icon>
+      <ion-label>Comportamiento</ion-label>
+    </ion-item>
+  </ion-list> -->
+<!-- </ion-card> -->

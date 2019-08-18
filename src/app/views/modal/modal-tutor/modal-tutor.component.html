@@ -1,0 +1,27 @@
+<ion-card>
+  <ion-label>
+    <h3>Registrar Tutor</h3>
+  </ion-label>
+
+  <form [formGroup]="form" (submit)="send()">
+    <ion-item>
+      <ion-label for="nombre">Nombre</ion-label>
+      <ion-input type="text" class="form-control" id="nombre" formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="rut">Rut</ion-label>
+      <ion-input type="text" class="form-control" id="rut" formControlName="rut"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="parentesco">Parentesco</ion-label>
+      <ion-input type="text" class="form-control" id="parentesco" formControlName="parentesco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="fotografia">Fotografía</ion-label>
+      <ion-input type="text" class="form-control" id="fotografia" formControlName="fotografia"></ion-input>
+    </ion-item>
+    <ion-button type="button" (click)="this.choose()">Agregar fotografía</ion-button>
+    <ion-button type="submit" class="btn btn-outline-dark">Registrar</ion-button>
+    <ion-button type="button" class="btn btn-outline-dark" (click)="dismiss()">Cancelar</ion-button>
+  </form>
+</ion-card>

@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-img id="foto" src="{{ this.datos.get('fotografia') }}" alt=""></ion-img>
+
+  <form [formGroup]="form" (submit)="enviar()">
+    <div class="form-group">
+      <ion-label for="detalle">Detalle</ion-label>
+      <ion-input type="text" class="form-control" id="detalle" formControlName="detalle"></ion-input>
+    </div>
+    <ion-card-content>
+      Nombre: {{ this.datos.get('nombre') }} <br />
+      Rut: {{ this.datos.get('rut') }} <br />
+      Parentesco:{{ this.datos.get('parentesco') }}
+    </ion-card-content>
+    <ion-button type="submit" [disabled]='this.largo=="2"' class="btn btn-outline-dark">{{this.verbo}}</ion-button>
+    <ion-button type="button" class="btn btn-outline-dark" (click)="dismiss()">Cancelar</ion-button>
+  </form>
+</ion-card>

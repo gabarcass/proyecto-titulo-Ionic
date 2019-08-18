@@ -1,0 +1,35 @@
+<ion-row>
+  <ion-col >
+        <form [formGroup]="form" (ngSubmit)="login()">
+        <ion-item>
+              <ion-label for="email">Correo</ion-label>
+              <ion-input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Correo"
+                formControlName="email"
+              ></ion-input>
+            </ion-item> 
+            <ion-item>
+            <ion-label for="password">Contraseña</ion-label>
+              <ion-input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Contraseña"
+                formControlName="password"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label for="role">Rol</ion-label>
+              <ion-select id="role" class="form-control" formControlName="role">
+                  <ion-select-option>Parvulario</ion-select-option>
+                  <ion-select-option>Apoderado</ion-select-option>
+                </ion-select>
+          </ion-item> 
+          <ion-button type="submit" class="btn btn-block btn-primary">INICIAR</ion-button>
+          </form>
+
+        </ion-col>
+</ion-row>

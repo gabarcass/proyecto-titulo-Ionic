@@ -1,0 +1,11 @@
+<ion-card>
+  <ion-img id="foto" src="{{ datos.get('fotografia') }}" alt=""></ion-img>
+
+  <ion-card-content>
+    Nombre: {{ this.datos.get('nombre') }} <br />
+    Lugar de estudios: {{ this.datos.get('lugar_estudios') }} <br />
+    correo:{{ this.datos.get('correo') }}<br />
+    Años en la institución:{{this.datos.get('anos_institucion')}}
+  </ion-card-content>
+  <ion-button type="button" class="btn btn-outline-dark" (click)="dismiss()">Atras</ion-button>
+</ion-card>

@@ -1,0 +1,42 @@
+<ion-card>
+  <ion-label>
+    <h3>Registrar comportamiento</h3>
+  </ion-label>
+  <form [formGroup]="form" (submit)="send()">
+    <ion-item>
+      <ion-label for="nombre">Nombre Medicamento: </ion-label>
+      <ion-input type="text" class="form-control" id="nombre" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="dosis">Dosis Medicamento: </ion-label>
+      <ion-input type="text" class="form-control" id="dosis" formControlName="dosis"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="detalle">Detalle: </ion-label>
+      <ion-input type="text" class="form-control" id="detalle" formControlName="detalle"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="certificado">Certificado Medico: </ion-label>
+      <ion-input type="text" class="form-control" id="certificado" formControlName="certificado"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-label for="fecha">Fecha: </ion-label>
+      <ion-datetime placeholder="Seleccione fecha" id="fecha" class="form-control" display-format="DD/MMMM/YYYY"
+        [min]="date" picker-format="MMMM DD" formControlName="fecha">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label for="hora">Hora: </ion-label>
+      <ion-datetime placeholder="Seleccione hora" id="hora" class="form-control" display-format="HH:mm"
+        picker-format="HH:mm" formControlName="hora" hour-values="7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-button type="submit" class="btn btn-outline-dark">Registrar</ion-button>
+    <ion-button type="button" class="btn btn-outline-dark" (click)="dismiss()">Cancelar</ion-button>
+  </form>
+</ion-card>

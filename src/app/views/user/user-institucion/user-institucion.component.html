@@ -1,0 +1,28 @@
+<ion-card>
+  <ion-card-header>
+    <ion-title class="ion-text-center">{{institucion.nombre}}</ion-title>
+  </ion-card-header>
+  <ion-item>
+    <ion-img src={{institucion.logo}}></ion-img>
+  </ion-item>
+  <ion-card-content>
+    {{institucion.vision}}
+  </ion-card-content>
+  <ion-item>
+    <ion-label>Direccion:{{institucion.direccion}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Correo:{{institucion.correo}}</ion-label>
+  </ion-item>
+</ion-card>
+<ion-item>
+  <ion-title>Parvularios</ion-title>
+
+</ion-item>
+<ion-item *ngFor='let parvulario of parvularios' (click)="presentModal(parvulario)">
+  <ion-avatar slot="start">
+    <img [src]="parvulario.fotografia" />
+  </ion-avatar>
+  <ion-label>{{parvulario.nombre}}</ion-label>
+
+</ion-item>

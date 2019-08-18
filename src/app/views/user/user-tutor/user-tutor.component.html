@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-item>
+    <ion-title text-center>Tutores</ion-title>
+  </ion-item>
+  <ion-item *ngIf="lista.length=='0'">
+    <ion-label text-center>
+      <h3>No se encuentran registros de algún<br>
+        tutor registrado.</h3>
+    </ion-label>
+  </ion-item>
+
+  <ion-item *ngFor="let tutor of lista">
+    <ion-avatar slot="start">
+      <img [src]="tutor.fotografia" />
+    </ion-avatar>
+    <ion-label (click)="presentModal(tutor)">{{ tutor.nombre }}</ion-label>
+    <ion-label (click)="presentModal(tutor)">{{ tutor.parentesco }}</ion-label>
+    <ion-icon (click)='presentAlertConfirm(tutor)' name="trash"></ion-icon>
+  </ion-item>
+
+  <ion-button [disabled]="limit>'3'" (click)="presentModal(this.dato)">Agregar tutor</ion-button>
+  <ion-item>
+    <ion-label *ngIf="limit>'3'">*Solo se puede agregar un máximo de 3 tutores por niño</ion-label>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-item *ngIf="registroAsistencia.length=='0'">
+  <ion-label text-center>
+    <h3>No existen registros de ingreso <br>
+      o retiro para el presente día.</h3>
+  </ion-label>
+</ion-item>
+
+<ion-card *ngFor="let historial of registroAsistencia">
+  <ion-item>
+    <ion-label *ngIf="historial.tipo.data[0]=='0'">Tipo: Ingreso</ion-label>
+    <ion-label *ngIf="historial.tipo.data[0]=='1'">Tipo: Retiro</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha:{{historial.fecha_registro}}</ion-label>
+    <ion-label>Hora: {{historial.hora_registro}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Parvulario: {{historial.nombre_parvulario}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label *ngIf="historial.nombre_apoderado">Encargado: {{historial.nombre_apoderado}}</ion-label>
+    <ion-label *ngIf="historial.nombre_tutor">Encargado: {{historial.nombre_tutor}}</ion-label>
+  </ion-item>
+  <ion-card-content>
+    {{historial.comentario}}
+  </ion-card-content>
+</ion-card>

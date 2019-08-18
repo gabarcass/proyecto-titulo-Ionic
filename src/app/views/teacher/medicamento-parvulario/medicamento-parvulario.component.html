@@ -1,0 +1,30 @@
+<ion-card *ngFor="let medicamento of lista">
+  <ion-card-header>
+    <ion-card-title>{{medicamento.nombre}}</ion-card-title>
+    <ion-card-subtitle></ion-card-subtitle>
+  </ion-card-header>
+  <ion-item>
+    <ion-label>Fecha:{{medicamento.fecha}}</ion-label>
+    <ion-label>Hora: {{medicamento.hora}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Dosis:{{medicamento.dosis}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label for="certificado">Certificado:</ion-label>
+    <ion-icon id="certificado" name="document"></ion-icon>
+  </ion-item>
+
+  <ion-card-content>
+    {{medicamento.detalle}}
+  </ion-card-content>
+  <ion-item>
+    <ion-button (click)="presentAlertConfirm(medicamento)">Suministrar</ion-button>
+  </ion-item>
+</ion-card>
+<ion-label *ngIf='this.lista.length=="0"'>No existen registros hasta el momento </ion-label>
+
+
+
+
+<ion-label *ngIf='this.lista'>{{this.titulo}}</ion-label>

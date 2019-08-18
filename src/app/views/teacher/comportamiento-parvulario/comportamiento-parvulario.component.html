@@ -1,0 +1,25 @@
+<ion-card *ngFor="let comportamiento of lista">
+
+  <ion-item>
+    <ion-label>Fecha:{{comportamiento.fecha_registro}}</ion-label>
+    <ion-label>Hora: {{comportamiento.hora_registro}}</ion-label>
+  </ion-item>
+  <ion-item *ngIf="comportamiento.incidencia=='reunion'">
+    <ion-label>Incidencia: Reunión</ion-label>
+  </ion-item>
+  <ion-item *ngIf="comportamiento.incidencia!='reunion'">
+    <ion-label>Incidencia: Notificar</ion-label>
+  </ion-item>
+  <ion-item *ngIf="comportamiento.hora">
+    <ion-label>Hora reuniónn:{{comportamiento.hora}}</ion-label>
+  </ion-item>
+  <ion-item *ngIf="comportamiento.hora">
+    <ion-label>Fecha reunión:{{comportamiento.hora}}</ion-label>
+  </ion-item>
+  <ion-card-content>
+    {{comportamiento.descripcion}}
+  </ion-card-content>
+</ion-card>
+<ion-label *ngIf='this.lista.length=="0"'>No existen registros hasta el momento </ion-label>
+
+<ion-button (click)="presentModal()">Agregar nuevo</ion-button>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        color="primary"
+        class="show-back-button"
+        (click)="back()"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Baby Control</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-icon (click)="authSrv.logout()" size="large" name="exit"> </ion-icon>
+      <!-- <ion-button color="primary" (click)="authSrv.logout()">Logout</ion-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- <ion-toolbar class="chatNotificacion" color="medium"> -->
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col [routerLink]="['/user/chat']">
+        <ion-icon name="chatbubbles" size="large" color="primary"> </ion-icon>
+        <ion-badge id="chat-badge" color="danger">7</ion-badge>
+      </ion-col>
+      <ion-col [routerLink]="['/user/notifications']">
+        <ion-icon name="notifications" size="large" color="primary"> </ion-icon>
+        <ion-badge id="chat-badge" color="danger" *ngIf="notRead > 0">{{
+          notRead
+        }}</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>

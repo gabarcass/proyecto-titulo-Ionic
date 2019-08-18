@@ -1,0 +1,23 @@
+<ion-item-divider>
+    <ion-label>
+      Contactar Padres
+    </ion-label>
+  </ion-item-divider>
+  <ion-content>
+      <ion-item *ngFor="let dato of lista">
+          <ion-avatar slot="start">
+            <img src="{{dato.fotografia}}">
+          </ion-avatar>
+          <ion-label>{{ dato.nombre }}</ion-label>
+          <ion-label>{{dato.parentesco}}</ion-label>
+          <ion-item>
+              <ion-icon name="call" (click)="llamar(dato.telefono)"></ion-icon>
+              <ion-icon name="chatboxes" (click)="chat()"></ion-icon>
+          </ion-item>
+        </ion-item>
+    </ion-content>
+  <ion-item-divider color="secondary">
+    <ion-label>
+      Secondary Item Divider
+    </ion-label>
+  </ion-item-divider>
